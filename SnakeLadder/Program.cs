@@ -7,6 +7,8 @@ namespace SnakeLadder
     {
         static void Main(string[] args)
         {
+            ////Variables
+            int counter = 0;
 
             Console.WriteLine("Welcome to Snake and Ladder game");
             int pos = 0;
@@ -51,10 +53,12 @@ namespace SnakeLadder
                     Console.WriteLine("Game completed");
                     break;
                 }
-                    
-                
+
+                counter++;
             }
+            ////Printing number of moves
             
+            Console.WriteLine("Number of moves by player1 =" + counter);
 
 
         }
