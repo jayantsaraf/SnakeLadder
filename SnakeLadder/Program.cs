@@ -26,10 +26,14 @@ namespace SnakeLadder
                 switch (option)
                 {
                     case 1:
-                        pos = dice;
                         break;
-                    case 2:
+                    case 2:                       
                         pos = pos + dice;
+                        ////Checking if position beyond 100
+                        if (pos>100)
+                        {
+                            pos = pos-dice;
+                        }
                         break;
                     case 3:
                         pos = pos - dice;
@@ -40,8 +44,15 @@ namespace SnakeLadder
                 }
                 if (pos < 0)
                     pos = 0;
-                Console.WriteLine("The position of player =" + pos);
 
+                Console.WriteLine("The position of player =" + pos);
+                if(pos==100)
+                {
+                    Console.WriteLine("Game completed");
+                    break;
+                }
+                    
+                
             }
             
 
